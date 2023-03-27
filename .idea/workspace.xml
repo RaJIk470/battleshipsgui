@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d399b58-e00a-4143-86bf-be24a78154f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/field/BattleshipField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/listener/BattleshipFieldMouseListener.java" afterDir="false" />
+    <list default="true" id="5d399b58-e00a-4143-86bf-be24a78154f8" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/battleship/Battleship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/battleship/Battleship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/field/BattleshipField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/field/BattleshipField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/field/BattleshipPlacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/field/BattleshipPlacer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/net/BattleshipClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/net/BattleshipClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/net/BattleshipServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/net/BattleshipServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/net/NetUtils.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Multirun.Unnamed">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Game" />
       <module name="seabattlegui" />
@@ -124,11 +124,31 @@
       <workItem from="1679814749898" duration="6165000" />
       <workItem from="1679820954522" duration="12872000" />
       <workItem from="1679836211753" duration="15646000" />
-      <workItem from="1679854912594" duration="622000" />
+      <workItem from="1679854912594" duration="7897000" />
+      <workItem from="1679895733398" duration="4119000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1679856276349</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679856276349</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1679856319009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679856319009</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>

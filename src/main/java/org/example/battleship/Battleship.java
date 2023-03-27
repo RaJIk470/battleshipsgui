@@ -10,12 +10,12 @@ import java.util.Optional;
 @Data
 public class Battleship {
     private int length;
-    private ArrayList<BattleshipPart> parts;
+    private List<BattleshipPart> parts;
     private boolean isDead = false;
 
     public Battleship(List<BattleshipPart> parts) {
         length = parts.size();
-        this.parts = new ArrayList<>(parts);
+        this.parts = parts;
     }
 
     public Optional<BattleshipPart> getPart(Point point) {

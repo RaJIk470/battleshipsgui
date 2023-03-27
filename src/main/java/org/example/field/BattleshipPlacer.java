@@ -74,6 +74,7 @@ public class BattleshipPlacer {
 
     public void remove(Point point) {
         Optional<Battleship> optionalBattleship = field.removeBattleship(point);
+        field.repaint();
         if (optionalBattleship.isPresent()) {
             Battleship battleship = optionalBattleship.get();
             push(battleship.getLength());

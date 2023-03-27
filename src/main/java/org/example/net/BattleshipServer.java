@@ -24,8 +24,8 @@ public class BattleshipServer extends BattleshipUser implements Runnable {
     }
 
     public void stop() throws IOException {
-        socket.close();
         serverSocket.close();
+        socket.close();
     }
 
     @Override
@@ -46,7 +46,7 @@ public class BattleshipServer extends BattleshipUser implements Runnable {
             throw new RuntimeException(e);
         }
         try {
-            while (!game.isClient()) {
+            while (game.isConnected()) {
                 //inputStream = new BufferedInputStream(socket.getInputStream());
                 //outputStream = new BufferedOutputStream(socket.getOutputStream());
                 while (!game.isGameStarted()) {
@@ -60,6 +60,11 @@ public class BattleshipServer extends BattleshipUser implements Runnable {
                 }
                 SecureRandom random = new SecureRandom();
                 boolean isUserTurn = random.nextBoolean();
+                if (isUserTurn) {
+                    MessageBox.infoBox("You are first", "First turn");
+                } else {
+                    MessageBox.infoBox("You are Second", "Second turn");
+                }
                 game.setUserTurn(isUserTurn);
                 writeStrategy(new DefineTurnStrategy(!isUserTurn));
 
@@ -109,8 +114,6 @@ public class BattleshipServer extends BattleshipUser implements Runnable {
             try {
                 serverSocket.close();
                 socket.close();
-                objectOutputStream.close();
-                objectInputStream.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

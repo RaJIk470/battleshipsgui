@@ -19,7 +19,7 @@ public class BattleshipClient extends BattleshipUser implements Runnable {
     public BattleshipClient(Game game, String host, int port) throws Exception {
         socket = new Socket(host, port);
         game.setConnected(true);
-        MessageBox.infoBox("Successfully connection to the server", "Success");
+        MessageBox.infoBox("Successfully connected to the server", "Success");
         //inputStream = new BufferedInputStream(socket.getInputStream());
         //outputStream = new BufferedOutputStream(socket.getOutputStream());
         this.game = game;
@@ -51,6 +51,12 @@ public class BattleshipClient extends BattleshipUser implements Runnable {
 
                 ActionStrategy strategy = readStrategy();
                 if (strategy instanceof DefineTurnStrategy) strategy.apply(game);
+
+                if (game.isUserTurn()) {
+                    MessageBox.infoBox("You are first", "First turn");
+                } else {
+                    MessageBox.infoBox("You are Second", "Second turn");
+                }
 
                 MessageBox.infoBox("Game is started", "Start");
                 while (game.isGameStarted()) {
@@ -95,9 +101,7 @@ public class BattleshipClient extends BattleshipUser implements Runnable {
             game.reset();
         } finally {
             try {
-                objectInputStream.close();
                 socket.close();
-                objectOutputStream.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

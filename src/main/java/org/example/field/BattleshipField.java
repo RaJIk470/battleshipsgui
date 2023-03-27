@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -87,6 +88,7 @@ public class BattleshipField extends JPanel {
                 }
             }
         }
+        repaint();
     }
 
     private void drawCross(Graphics2D g, int i, int j) {
@@ -94,6 +96,13 @@ public class BattleshipField extends JPanel {
         g.setStroke(new BasicStroke(2));
         g.draw(new Line2D.Float(i * cellWidth + 4, j * cellHeight + 4, (i + 1) * cellWidth - 4, (j + 1) * cellHeight - 4));
         g.draw(new Line2D.Float((i + 1) * cellWidth - 4 , j * cellHeight + 4, i * cellWidth + 4, (j + 1) * cellHeight - 4));
+    }
+
+    private void drawPlus(Graphics2D g, int i, int j) {
+        g.setColor(Color.BLACK);
+        g.setStroke(new BasicStroke(2));
+        g.draw(new Line2D.Float(i * cellWidth + 4, j * cellHeight + cellHeight / 2, i * cellWidth + cellWidth - 4, j * cellHeight + cellHeight / 2));
+        g.draw(new Line2D.Float(i * cellWidth + cellWidth / 2, j * cellHeight + 4, i * cellWidth + cellWidth / 2 , j * cellHeight + cellHeight - 4));
     }
 
     public void setBattleships(List<Battleship> battleships) {
@@ -159,6 +168,7 @@ public class BattleshipField extends JPanel {
             Battleship battleship = optionalBattleship.get();
             for (BattleshipPart bp : battleship.getParts()) {
                 field[bp.getPosition().x][bp.getPosition().y] = CellType.EMPTY;
+                System.out.println(Arrays.deepToString(field));
             }
             battleships.remove(battleship);
 

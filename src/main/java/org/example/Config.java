@@ -9,6 +9,6 @@ public class Config {
     }
 
     public static List<Integer> getReducedBattleships() {
-        return List.of(1);
+        return List.of(3, 2, 1);
     }
 }
