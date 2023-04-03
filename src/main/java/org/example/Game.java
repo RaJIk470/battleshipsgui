@@ -34,7 +34,7 @@ public class Game {
         userField = new BattleshipField(500, 500);
         enemyField = new BattleshipField(500, 500);
         battleshipFieldMouseListener = new BattleshipFieldMouseListener(this);
-        battleshipPlacerMouseListener = new BattleshipPlacerMouseListener(Config.getReducedBattleships(), this);
+        battleshipPlacerMouseListener = new BattleshipPlacerMouseListener(Config.getDefaultBattleships(), this);
         enemyField.addMouseListener(battleshipFieldMouseListener);
         userField.addMouseListener(battleshipPlacerMouseListener);
 
@@ -93,7 +93,7 @@ public class Game {
         enemyField.removeMouseListener(battleshipFieldMouseListener);
         userField.removeMouseListener(battleshipPlacerMouseListener);
         battleshipFieldMouseListener = new BattleshipFieldMouseListener(this);
-        battleshipPlacerMouseListener = new BattleshipPlacerMouseListener(Config.getReducedBattleships(), this);
+        battleshipPlacerMouseListener = new BattleshipPlacerMouseListener(Config.getDefaultBattleships(), this);
         enemyField.addMouseListener(battleshipFieldMouseListener);
         userField.addMouseListener(battleshipPlacerMouseListener);
 
